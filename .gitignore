@@ -1,5 +1,6 @@
 share/*
 !share/.gitkeep
+working_copy
 
 ## MacOSX
 # General

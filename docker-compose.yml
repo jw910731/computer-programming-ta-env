@@ -3,7 +3,7 @@ services:
   homework:
     build: ./hw
     volumes:
-      - ./merged:/data
+      - ./working_copy:/data
     networks:
       - no-network
 

@@ -1,10 +1,10 @@
 FROM ubuntu:jammy
 
-RUN apt update
-RUN apt install gcc make valgrind
+RUN apt-get update
+RUN apt-get install -y gcc make valgrind
 
-RUN addgroup -S runner && adduser -S runner -G runner
+RUN useradd runner
 
 USER runner
 
-CMD [ "/bin/sh", "-c", "while true; do sleep 10000; done" ]
+CMD [ "/bin/bash", "-c", "while true; do sleep 10000; done" ]
