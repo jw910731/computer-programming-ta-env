@@ -4,6 +4,7 @@ services:
     build: ./hw
     volumes:
       - ./working_copy:/data
+    working_dir: /data
     networks:
       - no-network
 
