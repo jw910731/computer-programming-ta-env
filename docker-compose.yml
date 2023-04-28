@@ -7,6 +7,7 @@ services:
     working_dir: /data
     networks:
       - no-network
+    user: runner
 
 networks:
   no-network:
