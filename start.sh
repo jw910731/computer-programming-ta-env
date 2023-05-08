@@ -1,4 +1,6 @@
 #!/bin/bash
-cp -r ./share ./working_copy
+cp -rT ./share ./working_copy/
 
-docker-compose run --rm homework /bin/bash
+podman unshare chown 1024 -R ./working_copy
+podman-compose run --rm homework /bin/bash
+podman unshare chown 0 -R ./working_copy

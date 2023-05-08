@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 RUN apt-get update
 RUN apt-get install -y gcc make valgrind
 
-RUN useradd runner
+RUN useradd -u 1024 runner
 
 USER runner
 
